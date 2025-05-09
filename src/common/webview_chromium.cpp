@@ -540,7 +540,7 @@ private:
 class wxWebViewChromiumHandlerResponse : public wxWebViewHandlerResponse
 {
 public:
-    wxWebViewChromiumHandlerResponse(CefRefPtr<CefCallback> callback) : m_callback(callback)
+    wxWebViewChromiumHandlerResponse(CefRefPtr<CefCallback> callback) : m_callback(callback), m_status(200)
     {
         m_futureResult = m_promiseResult.get_future();
     }
